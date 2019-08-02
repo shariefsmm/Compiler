@@ -1,0 +1,177 @@
+(* This is the preamble where you can have arbitrary sml code. For us
+it is empty *)
+
+open AST;
+
+
+%%
+
+(* Name of the parser *)
+%name tiger
+
+(* Produces verbose description of the generated LALR parser *)
+%verbose
+
+(* type to capture the position of a token within a file *)
+%pos int
+
+(* The terminals or tokens of the language.
+   Similar to ML datatype declaration.
+   The terminals with no datatype have no value associated with them *)
+%term INTEGER of int
+    | ID of string
+    | BREAK
+    | DO
+    | ELSE
+    | FOR
+    | FUNCTION
+    | IF
+    | NOT
+    | NIL
+    | PRINT
+    | THEN
+    | VAR
+    | WHILE
+    | NOTEQUAL
+    | LESSEQUAL
+    | GREATEREQUAL
+    | ASSIGN
+    | LPAREN
+    | RPAREN
+    | LBRACES
+    | RBRACES
+    | LBRACKETS
+    | RBRACKETS
+    | DOT
+    | SEMICOLON
+    | COMMA
+    | PLUS
+    | MINUS
+    | EQUALS
+    | MULTIPLY
+    | DIVIDE 
+    | LESS
+    | TRUE
+    | FALSE
+    | GREATER
+    | AND
+    | OR
+    | RETURN
+    | EOF
+    
+(* The nonterminals or symbols of the language.
+   The types for the nonterminals are the correspoding abstract syntax used to capture the semantic 
+   meaning of the values associated with the nonterminal *)
+%nonterm GO                     of Program
+       | PROGRAM                of Stmt list
+       | VARDECL                of VarDec
+       | MethodDecL             of MethodDec
+       | FormalParams           of Formal list
+       | FORMAL                 of Formal
+       | Stmt                   of Stmt
+       | Stmts                  of Stmt list
+       | Exp                    of Exp
+       | ExpList                of Exp list
+       | Const                  of Constant
+
+
+%eop EOF                (* the set of terminals that may follow the start symbol *)
+%pure                   (* the semantic actions are free of significant side-effects and always terminate *)
+%noshift EOF            (* non-shiftable terminals *)
+
+
+(* Specifying the precedence and associativity of operators *)
+%nonassoc ID
+%right ASSIGN
+%right DO IF THEN ELSE
+%left OR
+%left AND 
+%left EQUALS NOTEQUAL LESSEQUAL GREATEREQUAL LESS GREATER
+%left PLUS MINUS
+%left MULTIPLY DIVIDE
+%right NOT
+%nonassoc LBRACKETS RBRACKETS DOT
+%nonassoc LPAREN RPAREN
+%nonassoc LBRACES RBRACES
+
+%start GO
+
+%%
+
+(* The grammar associated with our program *)
+GO      : PROGRAM                                   ( Program(PROGRAM) )
+
+PROGRAM : Stmt                                      ( [Stmt] )
+        | Stmt PROGRAM                              ( Stmt :: PROGRAM )
+
+VARDECL :  VAR ID SEMICOLON                             (VarDec(ID, NONE))
+        |  VAR ID ASSIGN Exp SEMICOLON                  (VarDec(ID , SOME Exp))
+
+MethodDecL : FUNCTION ID LPAREN RPAREN ASSIGN Stmt           (MethodDec(ID,[],Stmt))
+        |    FUNCTION ID LPAREN FormalParams RPAREN
+            ASSIGN Stmt                             (MethodDec(ID,FormalParams,Stmt))
+
+FormalParams : FORMAL                               ([FORMAL])
+        |   FORMAL COMMA FormalParams               (FORMAL :: FormalParams) 
+
+FORMAL   : ID                                       (Formal ID)
+
+Stmts   :                                           ([])
+        | Stmt Stmts                                (Stmt :: Stmts)
+
+Stmt    : LBRACES Stmts RBRACES                     (Block Stmts)
+        
+        | ID ASSIGN Exp SEMICOLON                   (Assign(ID,NONE,Exp))
+        | ID LBRACKETS Exp RBRACKETS ASSIGN
+        Exp SEMICOLON                               (Assign(ID,SOME Exp1, Exp2))
+
+        | ID LPAREN RPAREN SEMICOLON                (CallStmt(ID,[]))
+        | ID LPAREN ExpList RPAREN SEMICOLON        (CallStmt(ID,ExpList))
+
+        | IF LPAREN Exp RPAREN THEN Stmt            (If(Exp,Stmt1,Block []))
+        | IF LPAREN Exp RPAREN THEN Stmt ELSE Stmt  (If(Exp,Stmt1,Stmt2))
+
+        | WHILE LPAREN Exp RPAREN DO Stmt           (While(Exp,Stmt))
+
+        | PRINT LPAREN Exp RPAREN SEMICOLON         (PrintE Exp)
+
+        | RETURN SEMICOLON                          (Return NONE)
+        | RETURN Exp SEMICOLON                      (Return(SOME Exp))
+
+        | VARDECL                                   (VDec VARDECL)
+
+        | MethodDecL                                (FDec MethodDecL)
+
+ExpList : Exp                                       ([Exp])
+        | Exp COMMA ExpList                         (Exp :: ExpList)
+
+
+Exp     : NIL                                       (Const Nil)
+        | INTEGER                                   (Const(Cint INTEGER))
+        | TRUE                                      (Const(Cbool true))
+        | FALSE                                     (Const(Cbool false))
+        
+        | Exp PLUS Exp %prec PLUS                   (BINOP(ADD,Exp1,Exp2))
+        | Exp MULTIPLY Exp %prec MULTIPLY           (BINOP(MUL,Exp1,Exp2))
+        | Exp MINUS Exp %prec MINUS                 (BINOP(SUB,Exp1,Exp2))
+        | Exp DIVIDE Exp %prec DIVIDE               (BINOP(DIV,Exp1,Exp2))
+        | Exp AND Exp %prec AND                     (BINOP(AND,Exp1,Exp2))
+        | Exp OR Exp %prec OR                       (BINOP(OR,Exp1,Exp2))
+
+        | Exp EQUALS Exp %prec EQUALS               (RELOP(EQ,Exp1,Exp2))
+        | Exp NOTEQUAL Exp %prec NOTEQUAL           (RELOP(NE,Exp1,Exp2))
+        | Exp LESS Exp %prec LESS                   (RELOP(LT,Exp1,Exp2))
+        | Exp LESSEQUAL Exp %prec LESSEQUAL         (RELOP(LE,Exp1,Exp2))
+        | Exp GREATER Exp %prec GREATER             (RELOP(GT,Exp1,Exp2))
+        | Exp GREATEREQUAL Exp %prec GREATEREQUAL   (RELOP(GE,Exp1,Exp2))
+
+        | NOT Exp                                   (NOT Exp)
+
+        | Exp LBRACKETS Exp RBRACKETS               (ArrayElement(Exp1,Exp2))
+
+        | ID LPAREN ExpList RPAREN                  (Call(ID,ExpList) )
+        | ID LPAREN RPAREN                          (Call(ID,[]))
+
+        | ID                                        (Var ID)
+
+        | LPAREN Exp RPAREN                         (Exp)

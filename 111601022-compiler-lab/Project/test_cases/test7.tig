@@ -1,0 +1,3 @@
+/* This will show an error if we are using same name for different arguments like */ 
+
+function myFun(a, a) := return a;

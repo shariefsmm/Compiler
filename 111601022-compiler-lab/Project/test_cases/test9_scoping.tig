@@ -1,0 +1,8 @@
+/*Here we can see the scoping i.e value of a variable inside and outside of fuction*/ 
+
+var a := 5;
+{
+	var a := 10;
+}
+
+print(a);

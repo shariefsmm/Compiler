@@ -1,0 +1,3 @@
+/* if does not define a variable and use it. It will raise an error */
+
+a := 2;

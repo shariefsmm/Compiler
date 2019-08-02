@@ -1,0 +1,1938 @@
+
+state 0:
+
+	GO : . PROGRAM 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	GO	goto 114
+	PROGRAM	goto 4
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 1
+
+	.	error
+
+
+state 1:
+
+	PROGRAM : Stmt .  (reduce by rule 1)
+	PROGRAM : Stmt . PROGRAM 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	PROGRAM	goto 13
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 1
+
+	.	reduce by rule 1
+
+
+state 2:
+
+	Stmt : MethodDecL .  (reduce by rule 24)
+
+
+
+	.	reduce by rule 24
+
+
+state 3:
+
+	Stmt : VARDECL .  (reduce by rule 23)
+
+
+
+	.	reduce by rule 23
+
+
+state 4:
+
+	GO : PROGRAM .  (reduce by rule 0)
+
+
+
+	.	reduce by rule 0
+
+
+state 5:
+
+	Stmt : RETURN . SEMICOLON 
+	Stmt : RETURN . Exp SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	SEMICOLON	shift 17
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 14
+
+	.	error
+
+
+state 6:
+
+	Stmt : LBRACES . Stmts RBRACES 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 24
+	Stmts	goto 23
+
+	.	reduce by rule 10
+
+
+state 7:
+
+	Stmt : WHILE . LPAREN Exp RPAREN DO Stmt 
+
+	LPAREN	shift 25
+
+
+	.	error
+
+
+state 8:
+
+	VARDECL : VAR . ID SEMICOLON 
+	VARDECL : VAR . ID ASSIGN Exp SEMICOLON 
+
+	ID	shift 26
+
+
+	.	error
+
+
+state 9:
+
+	Stmt : PRINT . LPAREN Exp RPAREN SEMICOLON 
+
+	LPAREN	shift 27
+
+
+	.	error
+
+
+state 10:
+
+	Stmt : IF . LPAREN Exp RPAREN THEN Stmt 
+	Stmt : IF . LPAREN Exp RPAREN THEN Stmt ELSE Stmt 
+
+	LPAREN	shift 28
+
+
+	.	error
+
+
+state 11:
+
+	MethodDecL : FUNCTION . ID LPAREN RPAREN ASSIGN Stmt 
+	MethodDecL : FUNCTION . ID LPAREN FormalParams RPAREN ASSIGN Stmt 
+
+	ID	shift 29
+
+
+	.	error
+
+
+state 12:
+
+	Stmt : ID . ASSIGN Exp SEMICOLON 
+	Stmt : ID . LBRACKETS Exp RBRACKETS ASSIGN Exp SEMICOLON 
+	Stmt : ID . LPAREN RPAREN SEMICOLON 
+	Stmt : ID . LPAREN ExpList RPAREN SEMICOLON 
+
+	ASSIGN	shift 32
+	LPAREN	shift 31
+	LBRACKETS	shift 30
+
+
+	.	error
+
+
+state 13:
+
+	PROGRAM : Stmt PROGRAM .  (reduce by rule 2)
+
+
+
+	.	reduce by rule 2
+
+
+state 14:
+
+	Stmt : RETURN Exp . SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	SEMICOLON	shift 42
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 15:
+
+	Exp : FALSE .  (reduce by rule 30)
+
+
+
+	.	reduce by rule 30
+
+
+state 16:
+
+	Exp : TRUE .  (reduce by rule 29)
+
+
+
+	.	reduce by rule 29
+
+
+state 17:
+
+	Stmt : RETURN SEMICOLON .  (reduce by rule 21)
+
+
+
+	.	reduce by rule 21
+
+
+state 18:
+
+	Exp : LPAREN . Exp RPAREN 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 47
+
+	.	error
+
+
+state 19:
+
+	Exp : NIL .  (reduce by rule 27)
+
+
+
+	.	reduce by rule 27
+
+
+state 20:
+
+	Exp : NOT . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 48
+
+	.	error
+
+
+state 21:
+
+	Exp : ID . LPAREN ExpList RPAREN 
+	Exp : ID . LPAREN RPAREN 
+	Exp : ID .  (reduce by rule 47)
+
+	LPAREN	shift 49
+
+
+	.	reduce by rule 47
+
+
+state 22:
+
+	Exp : INTEGER .  (reduce by rule 28)
+
+
+
+	.	reduce by rule 28
+
+
+state 23:
+
+	Stmt : LBRACES Stmts . RBRACES 
+
+	RBRACES	shift 50
+
+
+	.	error
+
+
+state 24:
+
+	Stmts : Stmt . Stmts 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 24
+	Stmts	goto 51
+
+	.	reduce by rule 10
+
+
+state 25:
+
+	Stmt : WHILE LPAREN . Exp RPAREN DO Stmt 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 52
+
+	.	error
+
+
+state 26:
+
+	VARDECL : VAR ID . SEMICOLON 
+	VARDECL : VAR ID . ASSIGN Exp SEMICOLON 
+
+	ASSIGN	shift 54
+	SEMICOLON	shift 53
+
+
+	.	error
+
+
+state 27:
+
+	Stmt : PRINT LPAREN . Exp RPAREN SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 55
+
+	.	error
+
+
+state 28:
+
+	Stmt : IF LPAREN . Exp RPAREN THEN Stmt 
+	Stmt : IF LPAREN . Exp RPAREN THEN Stmt ELSE Stmt 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 56
+
+	.	error
+
+
+state 29:
+
+	MethodDecL : FUNCTION ID . LPAREN RPAREN ASSIGN Stmt 
+	MethodDecL : FUNCTION ID . LPAREN FormalParams RPAREN ASSIGN Stmt 
+
+	LPAREN	shift 57
+
+
+	.	error
+
+
+state 30:
+
+	Stmt : ID LBRACKETS . Exp RBRACKETS ASSIGN Exp SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 58
+
+	.	error
+
+
+state 31:
+
+	Stmt : ID LPAREN . RPAREN SEMICOLON 
+	Stmt : ID LPAREN . ExpList RPAREN SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	RPAREN	shift 61
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 60
+	ExpList	goto 59
+
+	.	error
+
+
+state 32:
+
+	Stmt : ID ASSIGN . Exp SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 62
+
+	.	error
+
+
+state 33:
+
+	Exp : Exp OR . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 63
+
+	.	error
+
+
+state 34:
+
+	Exp : Exp AND . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 64
+
+	.	error
+
+
+state 35:
+
+	Exp : Exp GREATER . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 65
+
+	.	error
+
+
+state 36:
+
+	Exp : Exp LESS . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 66
+
+	.	error
+
+
+state 37:
+
+	Exp : Exp DIVIDE . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 67
+
+	.	error
+
+
+state 38:
+
+	Exp : Exp MULTIPLY . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 68
+
+	.	error
+
+
+state 39:
+
+	Exp : Exp EQUALS . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 69
+
+	.	error
+
+
+state 40:
+
+	Exp : Exp MINUS . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 70
+
+	.	error
+
+
+state 41:
+
+	Exp : Exp PLUS . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 71
+
+	.	error
+
+
+state 42:
+
+	Stmt : RETURN Exp SEMICOLON .  (reduce by rule 22)
+
+
+
+	.	reduce by rule 22
+
+
+state 43:
+
+	Exp : Exp LBRACKETS . Exp RBRACKETS 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 72
+
+	.	error
+
+
+state 44:
+
+	Exp : Exp GREATEREQUAL . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 73
+
+	.	error
+
+
+state 45:
+
+	Exp : Exp LESSEQUAL . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 74
+
+	.	error
+
+
+state 46:
+
+	Exp : Exp NOTEQUAL . Exp 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 75
+
+	.	error
+
+
+state 47:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+	Exp : LPAREN Exp . RPAREN 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	RPAREN	shift 76
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 48:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : NOT Exp .  (reduce by rule 43)
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+
+
+	.	reduce by rule 43
+
+
+state 49:
+
+	Exp : ID LPAREN . ExpList RPAREN 
+	Exp : ID LPAREN . RPAREN 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	RPAREN	shift 78
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 60
+	ExpList	goto 77
+
+	.	error
+
+
+state 50:
+
+	Stmt : LBRACES Stmts RBRACES .  (reduce by rule 12)
+
+
+
+	.	reduce by rule 12
+
+
+state 51:
+
+	Stmts : Stmt Stmts .  (reduce by rule 11)
+
+
+
+	.	reduce by rule 11
+
+
+state 52:
+
+	Stmt : WHILE LPAREN Exp . RPAREN DO Stmt 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	RPAREN	shift 79
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 53:
+
+	VARDECL : VAR ID SEMICOLON .  (reduce by rule 3)
+
+
+
+	.	reduce by rule 3
+
+
+state 54:
+
+	VARDECL : VAR ID ASSIGN . Exp SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 80
+
+	.	error
+
+
+state 55:
+
+	Stmt : PRINT LPAREN Exp . RPAREN SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	RPAREN	shift 81
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 56:
+
+	Stmt : IF LPAREN Exp . RPAREN THEN Stmt 
+	Stmt : IF LPAREN Exp . RPAREN THEN Stmt ELSE Stmt 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	RPAREN	shift 82
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 57:
+
+	MethodDecL : FUNCTION ID LPAREN . RPAREN ASSIGN Stmt 
+	MethodDecL : FUNCTION ID LPAREN . FormalParams RPAREN ASSIGN Stmt 
+
+	ID	shift 86
+	RPAREN	shift 85
+
+	FormalParams	goto 84
+	FORMAL	goto 83
+
+	.	error
+
+
+state 58:
+
+	Stmt : ID LBRACKETS Exp . RBRACKETS ASSIGN Exp SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	RBRACKETS	shift 87
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 59:
+
+	Stmt : ID LPAREN ExpList . RPAREN SEMICOLON 
+
+	RPAREN	shift 88
+
+
+	.	error
+
+
+state 60:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+	ExpList : Exp .  (reduce by rule 25)
+	ExpList : Exp . COMMA ExpList 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	COMMA	shift 89
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	reduce by rule 25
+
+
+state 61:
+
+	Stmt : ID LPAREN RPAREN . SEMICOLON 
+
+	SEMICOLON	shift 90
+
+
+	.	error
+
+
+state 62:
+
+	Stmt : ID ASSIGN Exp . SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	SEMICOLON	shift 91
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 63:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp OR Exp .  (reduce by rule 36)
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+
+
+	.	reduce by rule 36
+
+
+state 64:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp AND Exp .  (reduce by rule 35)
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+
+
+	.	reduce by rule 35
+
+
+state 65:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp GREATER Exp .  (reduce by rule 41)
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 41
+
+
+state 66:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp LESS Exp .  (reduce by rule 39)
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 39
+
+
+state 67:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp DIVIDE Exp .  (reduce by rule 34)
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+
+
+	.	reduce by rule 34
+
+
+state 68:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp MULTIPLY Exp .  (reduce by rule 32)
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+
+
+	.	reduce by rule 32
+
+
+state 69:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp EQUALS Exp .  (reduce by rule 37)
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 37
+
+
+state 70:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp MINUS Exp .  (reduce by rule 33)
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 33
+
+
+state 71:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp PLUS Exp .  (reduce by rule 31)
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 31
+
+
+state 72:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+	Exp : Exp LBRACKETS Exp . RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	RBRACKETS	shift 92
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 73:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp GREATEREQUAL Exp .  (reduce by rule 42)
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 42
+
+
+state 74:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp LESSEQUAL Exp .  (reduce by rule 40)
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 40
+
+
+state 75:
+
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp NOTEQUAL Exp .  (reduce by rule 38)
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	LBRACKETS	shift 43
+	PLUS	shift 41
+	MINUS	shift 40
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+
+
+	.	reduce by rule 38
+
+
+state 76:
+
+	Exp : LPAREN Exp RPAREN .  (reduce by rule 48)
+
+
+
+	.	reduce by rule 48
+
+
+state 77:
+
+	Exp : ID LPAREN ExpList . RPAREN 
+
+	RPAREN	shift 93
+
+
+	.	error
+
+
+state 78:
+
+	Exp : ID LPAREN RPAREN .  (reduce by rule 46)
+
+
+
+	.	reduce by rule 46
+
+
+state 79:
+
+	Stmt : WHILE LPAREN Exp RPAREN . DO Stmt 
+
+	DO	shift 94
+
+
+	.	error
+
+
+state 80:
+
+	VARDECL : VAR ID ASSIGN Exp . SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	SEMICOLON	shift 95
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 81:
+
+	Stmt : PRINT LPAREN Exp RPAREN . SEMICOLON 
+
+	SEMICOLON	shift 96
+
+
+	.	error
+
+
+state 82:
+
+	Stmt : IF LPAREN Exp RPAREN . THEN Stmt 
+	Stmt : IF LPAREN Exp RPAREN . THEN Stmt ELSE Stmt 
+
+	THEN	shift 97
+
+
+	.	error
+
+
+state 83:
+
+	FormalParams : FORMAL .  (reduce by rule 7)
+	FormalParams : FORMAL . COMMA FormalParams 
+
+	COMMA	shift 98
+
+
+	.	reduce by rule 7
+
+
+state 84:
+
+	MethodDecL : FUNCTION ID LPAREN FormalParams . RPAREN ASSIGN Stmt 
+
+	RPAREN	shift 99
+
+
+	.	error
+
+
+state 85:
+
+	MethodDecL : FUNCTION ID LPAREN RPAREN . ASSIGN Stmt 
+
+	ASSIGN	shift 100
+
+
+	.	error
+
+
+state 86:
+
+	FORMAL : ID .  (reduce by rule 9)
+
+
+
+	.	reduce by rule 9
+
+
+state 87:
+
+	Stmt : ID LBRACKETS Exp RBRACKETS . ASSIGN Exp SEMICOLON 
+
+	ASSIGN	shift 101
+
+
+	.	error
+
+
+state 88:
+
+	Stmt : ID LPAREN ExpList RPAREN . SEMICOLON 
+
+	SEMICOLON	shift 102
+
+
+	.	error
+
+
+state 89:
+
+	ExpList : Exp COMMA . ExpList 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 60
+	ExpList	goto 103
+
+	.	error
+
+
+state 90:
+
+	Stmt : ID LPAREN RPAREN SEMICOLON .  (reduce by rule 15)
+
+
+
+	.	reduce by rule 15
+
+
+state 91:
+
+	Stmt : ID ASSIGN Exp SEMICOLON .  (reduce by rule 13)
+
+
+
+	.	reduce by rule 13
+
+
+state 92:
+
+	Exp : Exp LBRACKETS Exp RBRACKETS .  (reduce by rule 44)
+
+
+
+	.	reduce by rule 44
+
+
+state 93:
+
+	Exp : ID LPAREN ExpList RPAREN .  (reduce by rule 45)
+
+
+
+	.	reduce by rule 45
+
+
+state 94:
+
+	Stmt : WHILE LPAREN Exp RPAREN DO . Stmt 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 104
+
+	.	error
+
+
+state 95:
+
+	VARDECL : VAR ID ASSIGN Exp SEMICOLON .  (reduce by rule 4)
+
+
+
+	.	reduce by rule 4
+
+
+state 96:
+
+	Stmt : PRINT LPAREN Exp RPAREN SEMICOLON .  (reduce by rule 20)
+
+
+
+	.	reduce by rule 20
+
+
+state 97:
+
+	Stmt : IF LPAREN Exp RPAREN THEN . Stmt 
+	Stmt : IF LPAREN Exp RPAREN THEN . Stmt ELSE Stmt 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 105
+
+	.	error
+
+
+state 98:
+
+	FormalParams : FORMAL COMMA . FormalParams 
+
+	ID	shift 86
+
+	FormalParams	goto 106
+	FORMAL	goto 83
+
+	.	error
+
+
+state 99:
+
+	MethodDecL : FUNCTION ID LPAREN FormalParams RPAREN . ASSIGN Stmt 
+
+	ASSIGN	shift 107
+
+
+	.	error
+
+
+state 100:
+
+	MethodDecL : FUNCTION ID LPAREN RPAREN ASSIGN . Stmt 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 108
+
+	.	error
+
+
+state 101:
+
+	Stmt : ID LBRACKETS Exp RBRACKETS ASSIGN . Exp SEMICOLON 
+
+	INTEGER	shift 22
+	ID	shift 21
+	NOT	shift 20
+	NIL	shift 19
+	LPAREN	shift 18
+	TRUE	shift 16
+	FALSE	shift 15
+
+	Exp	goto 109
+
+	.	error
+
+
+state 102:
+
+	Stmt : ID LPAREN ExpList RPAREN SEMICOLON .  (reduce by rule 16)
+
+
+
+	.	reduce by rule 16
+
+
+state 103:
+
+	ExpList : Exp COMMA ExpList .  (reduce by rule 26)
+
+
+
+	.	reduce by rule 26
+
+
+state 104:
+
+	Stmt : WHILE LPAREN Exp RPAREN DO Stmt .  (reduce by rule 19)
+
+
+
+	.	reduce by rule 19
+
+
+state 105:
+
+	Stmt : IF LPAREN Exp RPAREN THEN Stmt .  (reduce by rule 17)
+	Stmt : IF LPAREN Exp RPAREN THEN Stmt . ELSE Stmt 
+
+	ELSE	shift 110
+
+
+	.	reduce by rule 17
+
+
+state 106:
+
+	FormalParams : FORMAL COMMA FormalParams .  (reduce by rule 8)
+
+
+
+	.	reduce by rule 8
+
+
+state 107:
+
+	MethodDecL : FUNCTION ID LPAREN FormalParams RPAREN ASSIGN . Stmt 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 111
+
+	.	error
+
+
+state 108:
+
+	MethodDecL : FUNCTION ID LPAREN RPAREN ASSIGN Stmt .  (reduce by rule 5)
+
+
+
+	.	reduce by rule 5
+
+
+state 109:
+
+	Stmt : ID LBRACKETS Exp RBRACKETS ASSIGN Exp . SEMICOLON 
+	Exp : Exp . PLUS Exp 
+	Exp : Exp . MULTIPLY Exp 
+	Exp : Exp . MINUS Exp 
+	Exp : Exp . DIVIDE Exp 
+	Exp : Exp . AND Exp 
+	Exp : Exp . OR Exp 
+	Exp : Exp . EQUALS Exp 
+	Exp : Exp . NOTEQUAL Exp 
+	Exp : Exp . LESS Exp 
+	Exp : Exp . LESSEQUAL Exp 
+	Exp : Exp . GREATER Exp 
+	Exp : Exp . GREATEREQUAL Exp 
+	Exp : Exp . LBRACKETS Exp RBRACKETS 
+
+	NOTEQUAL	shift 46
+	LESSEQUAL	shift 45
+	GREATEREQUAL	shift 44
+	LBRACKETS	shift 43
+	SEMICOLON	shift 112
+	PLUS	shift 41
+	MINUS	shift 40
+	EQUALS	shift 39
+	MULTIPLY	shift 38
+	DIVIDE	shift 37
+	LESS	shift 36
+	GREATER	shift 35
+	AND	shift 34
+	OR	shift 33
+
+
+	.	error
+
+
+state 110:
+
+	Stmt : IF LPAREN Exp RPAREN THEN Stmt ELSE . Stmt 
+
+	ID	shift 12
+	FUNCTION	shift 11
+	IF	shift 10
+	PRINT	shift 9
+	VAR	shift 8
+	WHILE	shift 7
+	LBRACES	shift 6
+	RETURN	shift 5
+
+	VARDECL	goto 3
+	MethodDecL	goto 2
+	Stmt	goto 113
+
+	.	error
+
+
+state 111:
+
+	MethodDecL : FUNCTION ID LPAREN FormalParams RPAREN ASSIGN Stmt .  (reduce by rule 6)
+
+
+
+	.	reduce by rule 6
+
+
+state 112:
+
+	Stmt : ID LBRACKETS Exp RBRACKETS ASSIGN Exp SEMICOLON .  (reduce by rule 14)
+
+
+
+	.	reduce by rule 14
+
+
+state 113:
+
+	Stmt : IF LPAREN Exp RPAREN THEN Stmt ELSE Stmt .  (reduce by rule 18)
+
+
+
+	.	reduce by rule 18
+
+
+state 114:
+
+
+	EOF	accept
+
+
+	.	error
+
+301 of 618 action table entries left after compaction
+65 goto table entries

@@ -1,0 +1,4 @@
+/* This will raise an error if we are redeclatin a variable*/
+
+var a := 2;
+var a := 3;

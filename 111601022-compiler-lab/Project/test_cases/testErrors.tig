@@ -1,0 +1,16 @@
+/*All Errors leading thinsg in a single File*/
+
+myFun();
+function myFun(a) := return a;
+myFun();
+myFun(1, 2);
+a := 2 ;
+var a := 2;
+var a := 3;
+function myFun(a, a) := return a;
+function myFun() := 
+{
+	var i := 0;
+	while(i < 10) do i := i + 1;
+	return;
+}

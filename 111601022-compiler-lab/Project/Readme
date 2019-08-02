@@ -1,0 +1,53 @@
+-> To compile the code goto ~/111601022....../Project in terminal and first "make compiler" and then "./compiler test1.tig test1.js"
+		i.e after ./compiler we should give the one it should read from and next is the one it should write to.(if nothing is given it will write in a.js)
+
+
+->After above step we get JS file so to compile and check that one I am doing "node test1.js" or "node test2.js" like that to check 
+
+some points about this Compiler are -> source code -> Modified Tiger ; Target Code -> JavaScript
+										My input tiger should contain "SEMICOLON" at the end of each *statement*(This is done to get good printing(i.e Pretty Printing) as js has SEMICOLON  at the each statement.
+										if we are 
+
+Some Checks which this Compiler will do are as follows
+1) Should Have to declare a variable Before using it(If not declared then Error will be shown )
+					eg:-
+						v := 25 
+
+					/*without declaring the variable v before it will show error*/
+
+2) Should have to define a function before calling it(If not it will show error)
+					eg:- 
+						funccall(); or fucall(a,b)
+
+						/*Should have to define function before like *function* */
+
+3) Should have to give correct Number of arguments to a function as defined before 
+					eg:- 
+						function myfun(a) := return a;
+						myfun() or myfun(a,b,c) will show an error
+
+4) Function should return something 
+					eg:- 
+						function 
+
+5) Should not declare same variable again(if Declared Error will be shown)
+					eg:- 
+						var x := 25;
+						var x := 55; /*This won't be supported and will lead to an error*/
+
+6) Should not give two same arguments while declaring or calling a function
+					eg:-
+						function funcall(a,a,b) := return b;
+							/*This will give an error*/
+
+7) Should not define same function more than onetime
+					eg:- 
+						var a := 62;
+						function funcall(a) := return(a);
+						var b := 25; var c := 78;
+						function funcall(b,c) := return(b*c);
+
+8) Scoping is also There.(test2.tig)(You can Check this by using "node test2.js" after compiling the above thing)
+
+
+Some Features I left out are :- Type Checking, Regester allocation

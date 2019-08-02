@@ -1,0 +1,5 @@
+/*Here we will see if the numer of arguments in the don't match this will raise a error*/
+
+function myFun(a) := return a;
+myFun();
+myFun(1, 2);

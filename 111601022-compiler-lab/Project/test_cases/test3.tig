@@ -1,0 +1,5 @@
+/* Here In this we are seeing that error will arise we use a function without declare that function previously */
+
+myFun();
+
+var s:= 2;

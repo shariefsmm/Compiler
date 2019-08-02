@@ -1,0 +1,2182 @@
+85 shift/reduce conflicts
+start symbol used on the rhs of 1 rule
+
+warning: start symbol appears on the rhs of <PROGRAM : EXP PROGRAM >
+error:  state 12: shift/reduce conflict (shift LBRACKETS, reduce by rule 26)
+error:  state 12: shift/reduce conflict (shift LPAREN, reduce by rule 26)
+error:  state 26: shift/reduce conflict (shift LPAREN, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift WHILE, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift NIL, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift LET, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift IF, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift FOR, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift COMMENT, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift STRING, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift ID, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift INTEGER, reduce by rule 48)
+error:  state 52: shift/reduce conflict (shift OR, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift AND, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift GREATER, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift LESS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift DIVIDE, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift MULTIPLY, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift EQUALS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift MINUS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift PLUS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift LESSEQUAL, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift NOTEQUAL, reduce by rule 11)
+error:  state 72: shift/reduce conflict (shift OR, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift AND, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift GREATER, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift LESS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift DIVIDE, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift MULTIPLY, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift EQUALS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift MINUS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift PLUS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift LESSEQUAL, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift NOTEQUAL, reduce by rule 17)
+error:  state 79: shift/reduce conflict (shift OR, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift AND, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift GREATER, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift LESS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift DIVIDE, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift MULTIPLY, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift EQUALS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift MINUS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift PLUS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift LESSEQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift NOTEQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift ELSE, reduce by rule 16)
+error:  state 107: shift/reduce conflict (shift OR, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift AND, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift GREATER, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift LESS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift DIVIDE, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift MULTIPLY, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift EQUALS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift MINUS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift PLUS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift LESSEQUAL, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift NOTEQUAL, reduce by rule 15)
+error:  state 109: shift/reduce conflict (shift OR, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift AND, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift GREATER, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift LESS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift DIVIDE, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift MULTIPLY, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift EQUALS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift MINUS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift PLUS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift LESSEQUAL, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift NOTEQUAL, reduce by rule 12)
+error:  state 125: shift/reduce conflict (shift OR, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift AND, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift GREATER, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift LESS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift DIVIDE, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift MULTIPLY, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift EQUALS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift MINUS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift PLUS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift LESSEQUAL, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift NOTEQUAL, reduce by rule 18)
+
+state 0:
+
+	PROGRAM : . EXP 
+	PROGRAM : . EXP PROGRAM 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	PROGRAM	goto 130
+	EXP	goto 2
+	LVALUE	goto 1
+
+	.	error
+
+
+state 1:
+
+	EXP : LVALUE .  (reduce by rule 5)
+	EXP : LVALUE . ASSIGN EXP 
+	LVALUE : LVALUE . LBRACKETS EXP RBRACKETS 
+	LVALUE : LVALUE . DOT ID 
+
+	ASSIGN	shift 16
+	LBRACKETS	shift 15
+	DOT	shift 14
+
+
+	.	reduce by rule 5
+
+
+state 2:
+
+	PROGRAM : EXP .  (reduce by rule 0)
+	PROGRAM : EXP . PROGRAM 
+	EXP : EXP . OPERATOR EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	LPAREN	shift 4
+	PLUS	shift 27
+	MINUS	shift 26
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	PROGRAM	goto 18
+	EXP	goto 2
+	LVALUE	goto 1
+	OPERATOR	goto 17
+
+	.	reduce by rule 0
+
+
+state 3:
+
+	EXP : MINUS . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 31
+	LVALUE	goto 1
+
+	.	error
+
+
+state 4:
+
+	EXP : LPAREN . EXPS RPAREN 
+	EXP : LPAREN . RPAREN 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	RPAREN	shift 34
+	MINUS	shift 3
+
+	EXP	goto 33
+	EXPS	goto 32
+	LVALUE	goto 1
+
+	.	error
+
+
+state 5:
+
+	EXP : WHILE . EXP DO EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 35
+	LVALUE	goto 1
+
+	.	error
+
+
+state 6:
+
+	EXP : NIL .  (reduce by rule 2)
+
+
+
+	.	reduce by rule 2
+
+
+state 7:
+
+	EXP : LET . DECS IN EXPS END 
+	EXP : LET . DECS IN END 
+
+	FUNCTION	shift 43
+	TYPE	shift 42
+	VAR	shift 41
+
+	DEC	goto 40
+	DECS	goto 39
+	TYPEDEC	goto 38
+	FUNDEC	goto 37
+	VARDEC	goto 36
+
+	.	error
+
+
+state 8:
+
+	EXP : IF . EXP THEN EXP ELSE EXP 
+	EXP : IF . EXP THEN EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 44
+	LVALUE	goto 1
+
+	.	error
+
+
+state 9:
+
+	EXP : FOR . ID ASSIGN EXP TO EXP DO EXP 
+
+	ID	shift 45
+
+
+	.	error
+
+
+state 10:
+
+	EXP : COMMENT .  (reduce by rule 21)
+
+
+
+	.	reduce by rule 21
+
+
+state 11:
+
+	EXP : STRING .  (reduce by rule 4)
+
+
+
+	.	reduce by rule 4
+
+error:  state 12: shift/reduce conflict (shift LBRACKETS, reduce by rule 26)
+error:  state 12: shift/reduce conflict (shift LPAREN, reduce by rule 26)
+
+state 12:
+
+	EXP : ID . LPAREN EXPC RPAREN 
+	EXP : ID . LPAREN RPAREN 
+	EXP : ID . LBRACKETS EXP RBRACKETS OF EXP 
+	EXP : ID . LBRACES RECORDFIELDDEC RBRACES 
+	LVALUE : ID .  (reduce by rule 26)
+
+	LPAREN	shift 48
+	LBRACES	shift 47
+	LBRACKETS	shift 46
+
+
+	.	reduce by rule 26
+
+
+state 13:
+
+	EXP : INTEGER .  (reduce by rule 3)
+
+
+
+	.	reduce by rule 3
+
+
+state 14:
+
+	LVALUE : LVALUE DOT . ID 
+
+	ID	shift 49
+
+
+	.	error
+
+
+state 15:
+
+	LVALUE : LVALUE LBRACKETS . EXP RBRACKETS 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 50
+	LVALUE	goto 1
+
+	.	error
+
+
+state 16:
+
+	EXP : LVALUE ASSIGN . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 51
+	LVALUE	goto 1
+
+	.	error
+
+
+state 17:
+
+	EXP : EXP OPERATOR . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 52
+	LVALUE	goto 1
+
+	.	error
+
+
+state 18:
+
+	PROGRAM : EXP PROGRAM .  (reduce by rule 1)
+
+
+
+	.	reduce by rule 1
+
+
+state 19:
+
+	OPERATOR : OR .  (reduce by rule 58)
+
+
+
+	.	reduce by rule 58
+
+
+state 20:
+
+	OPERATOR : AND .  (reduce by rule 57)
+
+
+
+	.	reduce by rule 57
+
+
+state 21:
+
+	OPERATOR : GREATER .  (reduce by rule 51)
+
+
+
+	.	reduce by rule 51
+
+
+state 22:
+
+	OPERATOR : LESS .  (reduce by rule 52)
+
+
+
+	.	reduce by rule 52
+
+
+state 23:
+
+	OPERATOR : DIVIDE .  (reduce by rule 50)
+
+
+
+	.	reduce by rule 50
+
+
+state 24:
+
+	OPERATOR : MULTIPLY .  (reduce by rule 49)
+
+
+
+	.	reduce by rule 49
+
+
+state 25:
+
+	OPERATOR : EQUALS .  (reduce by rule 53)
+
+
+
+	.	reduce by rule 53
+
+error:  state 26: shift/reduce conflict (shift LPAREN, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift WHILE, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift NIL, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift LET, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift IF, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift FOR, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift COMMENT, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift STRING, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift ID, reduce by rule 48)
+error:  state 26: shift/reduce conflict (shift INTEGER, reduce by rule 48)
+
+state 26:
+
+	EXP : MINUS . EXP 
+	OPERATOR : MINUS .  (reduce by rule 48)
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+
+	EXP	goto 31
+	LVALUE	goto 1
+
+	.	reduce by rule 48
+
+
+state 27:
+
+	OPERATOR : PLUS .  (reduce by rule 47)
+
+
+
+	.	reduce by rule 47
+
+
+state 28:
+
+	OPERATOR : GREATEREQUAL .  (reduce by rule 56)
+
+
+
+	.	reduce by rule 56
+
+
+state 29:
+
+	OPERATOR : LESSEQUAL .  (reduce by rule 55)
+
+
+
+	.	reduce by rule 55
+
+
+state 30:
+
+	OPERATOR : NOTEQUAL .  (reduce by rule 54)
+
+
+
+	.	reduce by rule 54
+
+
+state 31:
+
+	EXP : MINUS EXP .  (reduce by rule 6)
+	EXP : EXP . OPERATOR EXP 
+
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 6
+
+
+state 32:
+
+	EXP : LPAREN EXPS . RPAREN 
+
+	RPAREN	shift 54
+
+
+	.	error
+
+
+state 33:
+
+	EXP : EXP . OPERATOR EXP 
+	EXPS : EXP .  (reduce by rule 24)
+	EXPS : EXP . SEMICOLON EXPS 
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	SEMICOLON	shift 55
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 24
+
+
+state 34:
+
+	EXP : LPAREN RPAREN .  (reduce by rule 8)
+
+
+
+	.	reduce by rule 8
+
+
+state 35:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : WHILE EXP . DO EXP 
+
+	DO	shift 56
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+
+state 36:
+
+	DEC : VARDEC .  (reduce by rule 34)
+
+
+
+	.	reduce by rule 34
+
+
+state 37:
+
+	DEC : FUNDEC .  (reduce by rule 35)
+
+
+
+	.	reduce by rule 35
+
+
+state 38:
+
+	DEC : TYPEDEC .  (reduce by rule 33)
+
+
+
+	.	reduce by rule 33
+
+
+state 39:
+
+	EXP : LET DECS . IN EXPS END 
+	EXP : LET DECS . IN END 
+
+	IN	shift 57
+
+
+	.	error
+
+
+state 40:
+
+	DECS : DEC .  (reduce by rule 31)
+	DECS : DEC . DECS 
+
+	FUNCTION	shift 43
+	TYPE	shift 42
+	VAR	shift 41
+
+	DEC	goto 40
+	DECS	goto 58
+	TYPEDEC	goto 38
+	FUNDEC	goto 37
+	VARDEC	goto 36
+
+	.	reduce by rule 31
+
+
+state 41:
+
+	VARDEC : VAR . ID ASSIGN EXP 
+	VARDEC : VAR . ID COLON ID ASSIGN EXP 
+
+	ID	shift 59
+
+
+	.	error
+
+
+state 42:
+
+	TYPEDEC : TYPE . ID EQUALS ID 
+	TYPEDEC : TYPE . ID EQUALS ARRAY OF ID 
+	TYPEDEC : TYPE . ID EQUALS LBRACES RECORDFIELDCREATE RBRACES 
+
+	ID	shift 60
+
+
+	.	error
+
+
+state 43:
+
+	FUNDEC : FUNCTION . ID LPAREN RECORDFIELDCREATE RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION . ID LPAREN RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION . ID LPAREN RECORDFIELDCREATE RPAREN COLON ID EQUALS EXP 
+	FUNDEC : FUNCTION . ID LPAREN RPAREN COLON ID EQUALS EXP 
+
+	ID	shift 61
+
+
+	.	error
+
+
+state 44:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : IF EXP . THEN EXP ELSE EXP 
+	EXP : IF EXP . THEN EXP 
+
+	THEN	shift 62
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+
+state 45:
+
+	EXP : FOR ID . ASSIGN EXP TO EXP DO EXP 
+
+	ASSIGN	shift 63
+
+
+	.	error
+
+
+state 46:
+
+	EXP : ID LBRACKETS . EXP RBRACKETS OF EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 64
+	LVALUE	goto 1
+
+	.	error
+
+
+state 47:
+
+	EXP : ID LBRACES . RECORDFIELDDEC RBRACES 
+
+	ID	shift 66
+
+	RECORDFIELDDEC	goto 65
+
+	.	error
+
+
+state 48:
+
+	EXP : ID LPAREN . EXPC RPAREN 
+	EXP : ID LPAREN . RPAREN 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	RPAREN	shift 69
+	MINUS	shift 3
+
+	EXP	goto 68
+	EXPC	goto 67
+	LVALUE	goto 1
+
+	.	error
+
+
+state 49:
+
+	LVALUE : LVALUE DOT ID .  (reduce by rule 28)
+
+
+
+	.	reduce by rule 28
+
+
+state 50:
+
+	EXP : EXP . OPERATOR EXP 
+	LVALUE : LVALUE LBRACKETS EXP . RBRACKETS 
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	RBRACKETS	shift 70
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+
+state 51:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : LVALUE ASSIGN EXP .  (reduce by rule 14)
+
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 14
+
+error:  state 52: shift/reduce conflict (shift OR, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift AND, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift GREATER, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift LESS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift DIVIDE, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift MULTIPLY, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift EQUALS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift MINUS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift PLUS, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift LESSEQUAL, reduce by rule 11)
+error:  state 52: shift/reduce conflict (shift NOTEQUAL, reduce by rule 11)
+
+state 52:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : EXP OPERATOR EXP .  (reduce by rule 11)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 11
+
+
+state 53:
+
+	OPERATOR : MINUS .  (reduce by rule 48)
+
+
+
+	.	reduce by rule 48
+
+
+state 54:
+
+	EXP : LPAREN EXPS RPAREN .  (reduce by rule 7)
+
+
+
+	.	reduce by rule 7
+
+
+state 55:
+
+	EXPS : EXP SEMICOLON . EXPS 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 33
+	EXPS	goto 71
+	LVALUE	goto 1
+
+	.	error
+
+
+state 56:
+
+	EXP : WHILE EXP DO . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 72
+	LVALUE	goto 1
+
+	.	error
+
+
+state 57:
+
+	EXP : LET DECS IN . EXPS END 
+	EXP : LET DECS IN . END 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	END	shift 74
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 33
+	EXPS	goto 73
+	LVALUE	goto 1
+
+	.	error
+
+
+state 58:
+
+	DECS : DEC DECS .  (reduce by rule 32)
+
+
+
+	.	reduce by rule 32
+
+
+state 59:
+
+	VARDEC : VAR ID . ASSIGN EXP 
+	VARDEC : VAR ID . COLON ID ASSIGN EXP 
+
+	ASSIGN	shift 76
+	COLON	shift 75
+
+
+	.	error
+
+
+state 60:
+
+	TYPEDEC : TYPE ID . EQUALS ID 
+	TYPEDEC : TYPE ID . EQUALS ARRAY OF ID 
+	TYPEDEC : TYPE ID . EQUALS LBRACES RECORDFIELDCREATE RBRACES 
+
+	EQUALS	shift 77
+
+
+	.	error
+
+
+state 61:
+
+	FUNDEC : FUNCTION ID . LPAREN RECORDFIELDCREATE RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION ID . LPAREN RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION ID . LPAREN RECORDFIELDCREATE RPAREN COLON ID EQUALS EXP 
+	FUNDEC : FUNCTION ID . LPAREN RPAREN COLON ID EQUALS EXP 
+
+	LPAREN	shift 78
+
+
+	.	error
+
+
+state 62:
+
+	EXP : IF EXP THEN . EXP ELSE EXP 
+	EXP : IF EXP THEN . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 79
+	LVALUE	goto 1
+
+	.	error
+
+
+state 63:
+
+	EXP : FOR ID ASSIGN . EXP TO EXP DO EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 80
+	LVALUE	goto 1
+
+	.	error
+
+
+state 64:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : ID LBRACKETS EXP . RBRACKETS OF EXP 
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	RBRACKETS	shift 81
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+
+state 65:
+
+	EXP : ID LBRACES RECORDFIELDDEC . RBRACES 
+
+	RBRACES	shift 82
+
+
+	.	error
+
+
+state 66:
+
+	RECORDFIELDDEC : ID . EQUALS EXP 
+	RECORDFIELDDEC : ID . EQUALS EXP COMMA RECORDFIELDDEC 
+
+	EQUALS	shift 83
+
+
+	.	error
+
+
+state 67:
+
+	EXP : ID LPAREN EXPC . RPAREN 
+
+	RPAREN	shift 84
+
+
+	.	error
+
+
+state 68:
+
+	EXP : EXP . OPERATOR EXP 
+	EXPC : EXP .  (reduce by rule 22)
+	EXPC : EXP . COMMA EXPS 
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	COMMA	shift 85
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 22
+
+
+state 69:
+
+	EXP : ID LPAREN RPAREN .  (reduce by rule 10)
+
+
+
+	.	reduce by rule 10
+
+
+state 70:
+
+	LVALUE : LVALUE LBRACKETS EXP RBRACKETS .  (reduce by rule 27)
+
+
+
+	.	reduce by rule 27
+
+
+state 71:
+
+	EXPS : EXP SEMICOLON EXPS .  (reduce by rule 25)
+
+
+
+	.	reduce by rule 25
+
+error:  state 72: shift/reduce conflict (shift OR, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift AND, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift GREATER, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift LESS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift DIVIDE, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift MULTIPLY, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift EQUALS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift MINUS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift PLUS, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift LESSEQUAL, reduce by rule 17)
+error:  state 72: shift/reduce conflict (shift NOTEQUAL, reduce by rule 17)
+
+state 72:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : WHILE EXP DO EXP .  (reduce by rule 17)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 17
+
+
+state 73:
+
+	EXP : LET DECS IN EXPS . END 
+
+	END	shift 86
+
+
+	.	error
+
+
+state 74:
+
+	EXP : LET DECS IN END .  (reduce by rule 20)
+
+
+
+	.	reduce by rule 20
+
+
+state 75:
+
+	VARDEC : VAR ID COLON . ID ASSIGN EXP 
+
+	ID	shift 87
+
+
+	.	error
+
+
+state 76:
+
+	VARDEC : VAR ID ASSIGN . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 88
+	LVALUE	goto 1
+
+	.	error
+
+
+state 77:
+
+	TYPEDEC : TYPE ID EQUALS . ID 
+	TYPEDEC : TYPE ID EQUALS . ARRAY OF ID 
+	TYPEDEC : TYPE ID EQUALS . LBRACES RECORDFIELDCREATE RBRACES 
+
+	ID	shift 91
+	ARRAY	shift 90
+	LBRACES	shift 89
+
+
+	.	error
+
+
+state 78:
+
+	FUNDEC : FUNCTION ID LPAREN . RECORDFIELDCREATE RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN . RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN . RECORDFIELDCREATE RPAREN COLON ID EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN . RPAREN COLON ID EQUALS EXP 
+
+	ID	shift 94
+	RPAREN	shift 93
+
+	RECORDFIELDCREATE	goto 92
+
+	.	error
+
+error:  state 79: shift/reduce conflict (shift OR, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift AND, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift GREATER, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift LESS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift DIVIDE, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift MULTIPLY, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift EQUALS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift MINUS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift PLUS, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift LESSEQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift NOTEQUAL, reduce by rule 16)
+error:  state 79: shift/reduce conflict (shift ELSE, reduce by rule 16)
+
+state 79:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : IF EXP THEN EXP . ELSE EXP 
+	EXP : IF EXP THEN EXP .  (reduce by rule 16)
+
+	ELSE	shift 95
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 16
+
+
+state 80:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : FOR ID ASSIGN EXP . TO EXP DO EXP 
+
+	TO	shift 96
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+
+state 81:
+
+	EXP : ID LBRACKETS EXP RBRACKETS . OF EXP 
+
+	OF	shift 97
+
+
+	.	error
+
+
+state 82:
+
+	EXP : ID LBRACES RECORDFIELDDEC RBRACES .  (reduce by rule 13)
+
+
+
+	.	reduce by rule 13
+
+
+state 83:
+
+	RECORDFIELDDEC : ID EQUALS . EXP 
+	RECORDFIELDDEC : ID EQUALS . EXP COMMA RECORDFIELDDEC 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 98
+	LVALUE	goto 1
+
+	.	error
+
+
+state 84:
+
+	EXP : ID LPAREN EXPC RPAREN .  (reduce by rule 9)
+
+
+
+	.	reduce by rule 9
+
+
+state 85:
+
+	EXPC : EXP COMMA . EXPS 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 33
+	EXPS	goto 99
+	LVALUE	goto 1
+
+	.	error
+
+
+state 86:
+
+	EXP : LET DECS IN EXPS END .  (reduce by rule 19)
+
+
+
+	.	reduce by rule 19
+
+
+state 87:
+
+	VARDEC : VAR ID COLON ID . ASSIGN EXP 
+
+	ASSIGN	shift 100
+
+
+	.	error
+
+
+state 88:
+
+	EXP : EXP . OPERATOR EXP 
+	VARDEC : VAR ID ASSIGN EXP .  (reduce by rule 45)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 45
+
+
+state 89:
+
+	TYPEDEC : TYPE ID EQUALS LBRACES . RECORDFIELDCREATE RBRACES 
+
+	ID	shift 94
+
+	RECORDFIELDCREATE	goto 101
+
+	.	error
+
+
+state 90:
+
+	TYPEDEC : TYPE ID EQUALS ARRAY . OF ID 
+
+	OF	shift 102
+
+
+	.	error
+
+
+state 91:
+
+	TYPEDEC : TYPE ID EQUALS ID .  (reduce by rule 36)
+
+
+
+	.	reduce by rule 36
+
+
+state 92:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE . RPAREN EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE . RPAREN COLON ID EQUALS EXP 
+
+	RPAREN	shift 103
+
+
+	.	error
+
+
+state 93:
+
+	FUNDEC : FUNCTION ID LPAREN RPAREN . EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN RPAREN . COLON ID EQUALS EXP 
+
+	COLON	shift 105
+	EQUALS	shift 104
+
+
+	.	error
+
+
+state 94:
+
+	RECORDFIELDCREATE : ID . COLON ID 
+	RECORDFIELDCREATE : ID . COLON ID COMMA RECORDFIELDCREATE 
+
+	COLON	shift 106
+
+
+	.	error
+
+
+state 95:
+
+	EXP : IF EXP THEN EXP ELSE . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 107
+	LVALUE	goto 1
+
+	.	error
+
+
+state 96:
+
+	EXP : FOR ID ASSIGN EXP TO . EXP DO EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 108
+	LVALUE	goto 1
+
+	.	error
+
+
+state 97:
+
+	EXP : ID LBRACKETS EXP RBRACKETS OF . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 109
+	LVALUE	goto 1
+
+	.	error
+
+
+state 98:
+
+	EXP : EXP . OPERATOR EXP 
+	RECORDFIELDDEC : ID EQUALS EXP .  (reduce by rule 29)
+	RECORDFIELDDEC : ID EQUALS EXP . COMMA RECORDFIELDDEC 
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	COMMA	shift 110
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 29
+
+
+state 99:
+
+	EXPC : EXP COMMA EXPS .  (reduce by rule 23)
+
+
+
+	.	reduce by rule 23
+
+
+state 100:
+
+	VARDEC : VAR ID COLON ID ASSIGN . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 111
+	LVALUE	goto 1
+
+	.	error
+
+
+state 101:
+
+	TYPEDEC : TYPE ID EQUALS LBRACES RECORDFIELDCREATE . RBRACES 
+
+	RBRACES	shift 112
+
+
+	.	error
+
+
+state 102:
+
+	TYPEDEC : TYPE ID EQUALS ARRAY OF . ID 
+
+	ID	shift 113
+
+
+	.	error
+
+
+state 103:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN . EQUALS EXP 
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN . COLON ID EQUALS EXP 
+
+	COLON	shift 115
+	EQUALS	shift 114
+
+
+	.	error
+
+
+state 104:
+
+	FUNDEC : FUNCTION ID LPAREN RPAREN EQUALS . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 116
+	LVALUE	goto 1
+
+	.	error
+
+
+state 105:
+
+	FUNDEC : FUNCTION ID LPAREN RPAREN COLON . ID EQUALS EXP 
+
+	ID	shift 117
+
+
+	.	error
+
+
+state 106:
+
+	RECORDFIELDCREATE : ID COLON . ID 
+	RECORDFIELDCREATE : ID COLON . ID COMMA RECORDFIELDCREATE 
+
+	ID	shift 118
+
+
+	.	error
+
+error:  state 107: shift/reduce conflict (shift OR, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift AND, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift GREATER, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift LESS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift DIVIDE, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift MULTIPLY, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift EQUALS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift MINUS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift PLUS, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift LESSEQUAL, reduce by rule 15)
+error:  state 107: shift/reduce conflict (shift NOTEQUAL, reduce by rule 15)
+
+state 107:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : IF EXP THEN EXP ELSE EXP .  (reduce by rule 15)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 15
+
+
+state 108:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : FOR ID ASSIGN EXP TO EXP . DO EXP 
+
+	DO	shift 119
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	error
+
+error:  state 109: shift/reduce conflict (shift OR, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift AND, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift GREATER, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift LESS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift DIVIDE, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift MULTIPLY, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift EQUALS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift MINUS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift PLUS, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift LESSEQUAL, reduce by rule 12)
+error:  state 109: shift/reduce conflict (shift NOTEQUAL, reduce by rule 12)
+
+state 109:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : ID LBRACKETS EXP RBRACKETS OF EXP .  (reduce by rule 12)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 12
+
+
+state 110:
+
+	RECORDFIELDDEC : ID EQUALS EXP COMMA . RECORDFIELDDEC 
+
+	ID	shift 66
+
+	RECORDFIELDDEC	goto 120
+
+	.	error
+
+
+state 111:
+
+	EXP : EXP . OPERATOR EXP 
+	VARDEC : VAR ID COLON ID ASSIGN EXP .  (reduce by rule 46)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 46
+
+
+state 112:
+
+	TYPEDEC : TYPE ID EQUALS LBRACES RECORDFIELDCREATE RBRACES .  (reduce by rule 38)
+
+
+
+	.	reduce by rule 38
+
+
+state 113:
+
+	TYPEDEC : TYPE ID EQUALS ARRAY OF ID .  (reduce by rule 37)
+
+
+
+	.	reduce by rule 37
+
+
+state 114:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN EQUALS . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 121
+	LVALUE	goto 1
+
+	.	error
+
+
+state 115:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN COLON . ID EQUALS EXP 
+
+	ID	shift 122
+
+
+	.	error
+
+
+state 116:
+
+	EXP : EXP . OPERATOR EXP 
+	FUNDEC : FUNCTION ID LPAREN RPAREN EQUALS EXP .  (reduce by rule 42)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 42
+
+
+state 117:
+
+	FUNDEC : FUNCTION ID LPAREN RPAREN COLON ID . EQUALS EXP 
+
+	EQUALS	shift 123
+
+
+	.	error
+
+
+state 118:
+
+	RECORDFIELDCREATE : ID COLON ID .  (reduce by rule 39)
+	RECORDFIELDCREATE : ID COLON ID . COMMA RECORDFIELDCREATE 
+
+	COMMA	shift 124
+
+
+	.	reduce by rule 39
+
+
+state 119:
+
+	EXP : FOR ID ASSIGN EXP TO EXP DO . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 125
+	LVALUE	goto 1
+
+	.	error
+
+
+state 120:
+
+	RECORDFIELDDEC : ID EQUALS EXP COMMA RECORDFIELDDEC .  (reduce by rule 30)
+
+
+
+	.	reduce by rule 30
+
+
+state 121:
+
+	EXP : EXP . OPERATOR EXP 
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN EQUALS EXP .  (reduce by rule 41)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 41
+
+
+state 122:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN COLON ID . EQUALS EXP 
+
+	EQUALS	shift 126
+
+
+	.	error
+
+
+state 123:
+
+	FUNDEC : FUNCTION ID LPAREN RPAREN COLON ID EQUALS . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 127
+	LVALUE	goto 1
+
+	.	error
+
+
+state 124:
+
+	RECORDFIELDCREATE : ID COLON ID COMMA . RECORDFIELDCREATE 
+
+	ID	shift 94
+
+	RECORDFIELDCREATE	goto 128
+
+	.	error
+
+error:  state 125: shift/reduce conflict (shift OR, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift AND, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift GREATER, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift LESS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift DIVIDE, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift MULTIPLY, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift EQUALS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift MINUS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift PLUS, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift GREATEREQUAL, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift LESSEQUAL, reduce by rule 18)
+error:  state 125: shift/reduce conflict (shift NOTEQUAL, reduce by rule 18)
+
+state 125:
+
+	EXP : EXP . OPERATOR EXP 
+	EXP : FOR ID ASSIGN EXP TO EXP DO EXP .  (reduce by rule 18)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 18
+
+
+state 126:
+
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN COLON ID EQUALS . EXP 
+
+	INTEGER	shift 13
+	ID	shift 12
+	STRING	shift 11
+	COMMENT	shift 10
+	FOR	shift 9
+	IF	shift 8
+	LET	shift 7
+	NIL	shift 6
+	WHILE	shift 5
+	LPAREN	shift 4
+	MINUS	shift 3
+
+	EXP	goto 129
+	LVALUE	goto 1
+
+	.	error
+
+
+state 127:
+
+	EXP : EXP . OPERATOR EXP 
+	FUNDEC : FUNCTION ID LPAREN RPAREN COLON ID EQUALS EXP .  (reduce by rule 44)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 44
+
+
+state 128:
+
+	RECORDFIELDCREATE : ID COLON ID COMMA RECORDFIELDCREATE .  (reduce by rule 40)
+
+
+
+	.	reduce by rule 40
+
+
+state 129:
+
+	EXP : EXP . OPERATOR EXP 
+	FUNDEC : FUNCTION ID LPAREN RECORDFIELDCREATE RPAREN COLON ID EQUALS EXP .  (reduce by rule 43)
+
+	NOTEQUAL	shift 30
+	LESSEQUAL	shift 29
+	GREATEREQUAL	shift 28
+	PLUS	shift 27
+	MINUS	shift 53
+	EQUALS	shift 25
+	MULTIPLY	shift 24
+	DIVIDE	shift 23
+	LESS	shift 22
+	GREATER	shift 21
+	AND	shift 20
+	OR	shift 19
+
+	OPERATOR	goto 17
+
+	.	reduce by rule 43
+
+
+state 130:
+
+
+	EOF	accept
+
+
+	.	error
+
+397 of 783 action table entries left after compaction
+104 goto table entries
